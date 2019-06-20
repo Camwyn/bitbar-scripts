@@ -1,4 +1,4 @@
-#!/usr/bin/env /usr/local/bin/node
+#!/usr/bin/env /Users/camwyn/.nvm/versions/node/v9.11.2/bin/node
 /* jshint esversion: 6, loopfunc: true */
 
 /*
@@ -31,51 +31,73 @@ try {
 	sections = require( './tribe-central/sections.sample.json' );
 }
 
-if ( process.env.BitBar ) {
-	var section = null;
-	var prefix = null;
+if ( ! process.env.BitBar ) {
+	return;
+}
 
-	for ( var key in sections ) {
-		if ( ! sections.hasOwnProperty( key ) ) {
-			continue;
-		}
 
-		section = sections[ key ];
+var section = null;
+var prefix = null;
 
-		if (
-			null !== section
-			&& 'object' !== typeof section
-		) {
-			try {
-				section = require( './tribe-central/' + section );
-			} catch( err ) {
-				section = {};
-			}
-		}
-
-		if ( 'undefined' === typeof section.name ) {
-			continue;
-		}
-
-		prefix = section.nested ? '--' : '';
-
-		console.log( '---' );
-		console.log( section.name );
-
-		section.items.forEach( function( item ) {
-			if ( 'undefined' !== typeof item.url ) {
-				console.log( prefix + item.name + ' | href=' + item.url );
-			} else if ( 'undefined' !== typeof item.id ) {
-				console.log( prefix + item.name + ' | href=https://central.tri.be/issues/' + item.id );
-				console.log( prefix + item.name + ' ⬅ | alternate=true href=https://central.tri.be/issues/' + item.id + '/time_entries/new' );
-			} else {
-				console.log( prefix + '---' );
-				console.log( prefix + item.name );
-			}
-		} );
+for ( var key in sections ) {
+	if ( ! sections.hasOwnProperty( key ) ) {
+		continue;
 	}
 
-	console.log('---');
-	console.log('Refresh | refresh=true terminal=false');
+	section = sections[ key ];
+
+	if (
+		null !== section
+		&& 'object' !== typeof section
+	) {
+		try {
+			section = require( './tribe-central/' + section );
+		} catch( err ) {
+			section = {};
+		}
+	}
+
+	if ( 'undefined' === typeof section.name ) {
+		continue;
+	}
+
+	prefix = section.nested ? '--' : '';
+
+	function eachRecursive( child, nest ) {
+		if ( 'undefined' === typeof nest ) {
+			nest = 0;
+		}
+
+		var sep = '--';
+		sep = prefix + sep.repeat(nest);
+
+		if ( 'undefined' !== typeof child.nested || 'undefined' !== typeof child.items ) {
+			console.log( sep + '---' );
+			console.log( sep + child.name );
+			child.items.forEach( function( grandchild ) {
+				eachRecursive( grandchild , nest + 1 );
+			} );
+		} else {
+			if ( 'undefined' !== typeof child.url ) {
+				console.log( sep + child.name + ' | href=' + child.url );
+			} else if ( 'undefined' !== typeof child.id ) {
+				console.log( sep + child.name + ' | href=https://central.tri.be/issues/' + child.id );
+				console.log( sep + child.name + ' ⬅ | alternate=true href=https://central.tri.be/issues/' + child.id + '/time_entries/new' );
+			} else {
+				console.log( sep + child.name );
+			}
+		}
+	}
+
+	console.log( '---' );
+	console.log( section.name );
+
+	section.items.forEach( function( child ) {
+		eachRecursive( child );
+	} );
+
 }
+
+console.log('---');
+console.log('Refresh | refresh=true terminal=false');
 

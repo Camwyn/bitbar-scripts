@@ -3,118 +3,155 @@
 	"nested": true,
 	"items": [
 		{
-			"name": "Common"
+			"name": "Common",
+			"nested": true,
+			"items": [
+				{
+					"url": "https://github.com/moderntribe/tribe-common",
+					"name": "Tribe Common"
+				}
+			]
 		},
 		{
-			"url": "https://github.com/moderntribe/tribe-common",
-			"name": "Tribe Common"
+			"name": "The Events Calendar",
+			"nested": true,
+			"items": [
+				{
+					"url": "https://github.com/moderntribe/the-events-calendar",
+					"name": "TEC"
+				},
+				{
+					"url": "https://github.com/moderntribe/events-pro",
+					"name": "PRO"
+				},
+				{
+					"url": "https://github.com/moderntribe/events-eventbrite",
+					"name": "Eventbrite"
+				},
+				{
+					"url": "https://github.com/moderntribe/events-filterbar",
+					"name": "Filterbar"
+				},
+				{
+					"url": "https://github.com/moderntribe/events-elasticsearch",
+					"name": "Elastic Events"
+				}
+			]
 		},
 		{
-			"name": "The Events Calendar"
+			"name": "Tickets",
+			"nested": true,
+			"items": [
+				{
+					"url": "https://github.com/moderntribe/event-tickets",
+					"name": "Event Tickets"
+				},
+				{
+					"url": "https://github.com/moderntribe/event-tickets-plus",
+					"name": "Event Tickets Plus"
+				}
+			]
 		},
 		{
-			"url": "https://github.com/moderntribe/the-events-calendar",
-			"name": "TEC"
+			"name": "Community",
+			"nested": true,
+			"items": [
+				{
+					"url": "https://github.com/moderntribe/events-community",
+					"name": "Community Events"
+				},
+				{
+					"url": "https://github.com/moderntribe/events-community-tickets",
+					"name": "Community Tickets"
+				}
+			]
 		},
 		{
-			"url": "https://github.com/moderntribe/events-community",
-			"name": "Community"
+			"name": "Image Widget",
+			"nested": true,
+			"items": [
+				{
+					"url": "https://github.com/moderntribe/image-widget",
+					"name": "Image Widget"
+				},
+				{
+					"url": "https://github.com/moderntribe/image-widget-plus",
+					"name": "Image Widget Plus"
+				}
+			]
 		},
 		{
-			"url": "https://github.com/moderntribe/events-community-tickets",
-			"name": "Community Tickets"
+			"name": "Sites & Services",
+			"nested": true,
+			"items": [
+				{
+					"url": "https://github.com/moderntribe/eventscalendarpro.com",
+					"name": "TEC.com"
+				},
+				{
+					"url": "https://github.com/moderntribe/calendar-saas",
+					"name": "Loxi Marketing Site"
+				},
+				{
+					"url": "https://github.com/moderntribe/calendar-saas-app",
+					"name": "Loxi App"
+				},
+				{
+					"url": "https://github.com/moderntribe/event-aggregator-site",
+					"name": "Event Aggregator"
+				},
+				{
+					"url": "https://github.com/moderntribe/pue-service",
+					"name": "PUE"
+				}
+			]
 		},
+
 		{
-			"url": "https://github.com/moderntribe/events-eventbrite",
-			"name": "Eventbrite"
-		},
-		{
-			"url": "https://github.com/moderntribe/events-filterbar",
-			"name": "Filterbar"
-		},
-		{
-			"url": "https://github.com/moderntribe/events-pro",
-			"name": "PRO"
-		},
-		{
-			"name": "Event Tickets"
-		},
-		{
-			"url": "https://github.com/moderntribe/event-tickets",
-			"name": "Event Tickets"
-		},
-		{
-			"url": "https://github.com/moderntribe/event-tickets-plus",
-			"name": "Event Tickets Plus"
-		},
-		{
-			"name": "Image Widget"
-		},
-		{
-			"url": "https://github.com/moderntribe/image-widget",
-			"name": "Image Widget"
-		},
-		{
-			"url": "https://github.com/moderntribe/image-widget-plus",
-			"name": "Image Widget Plus"
-		},
-		{
-			"name": "Sites & Services"
-		},
-		{
-			"url": "https://github.com/moderntribe/eventscalendarpro.com",
-			"name": "TEC.com"
-		},
-		{
-			"url": "https://github.com/moderntribe/calendar-saas",
-			"name": "Lumin"
-		},
-		{
-			"url": "https://github.com/moderntribe/calendar-saas-app",
-			"name": "Lumin App"
-		},
-		{
-			"url": "https://github.com/moderntribe/event-aggregator-site",
-			"name": "Event Aggregator"
-		},
-		{
-			"url": "https://github.com/moderntribe/pue-service",
-			"name": "PUE"
-		},
-		{
-			"name": "Misc"
-		},
-		{
-			"url": "https://github.com/moderntribe/advanced-post-manager",
-			"name": "Advanced Post Manager"
-		},
-		{
-			"url": "https://github.com/moderntribe/TribalScents",
-			"name": "CodeSniffer: Tribal Scents"
-		},
-		{
-			"url": "https://github.com/moderntribe/tr1b0t",
-			"name": "Hubot: tr1b0t"
-		},
-		{
-			"url": "https://github.com/moderntribe/tribe-jenkins-scripts",
-			"name": "Jenkins Scripts"
-		},
-		{
-			"url": "https://github.com/moderntribe/product-taskmaster",
-			"name": "Product Taskmaster"
-		},
-		{
-			"url": "https://github.com/moderntribe/tribe-product-utils",
-			"name": "Product Utils"
-		},
-		{
-			"url": "https://github.com/borkweb/bitbar-scripts",
-			"name": "Scripts: BitBar"
-		},
-		{
-			"url": "https://github.com/moderntribe/tampermonkey-scripts",
-			"name": "Scripts: Tampermonkey"
+			"name": "Misc",
+			"nested": true,
+			"items": [
+				{
+					"url": "https://github.com/moderntribe/square-one",
+					"name": "SquareOne"
+				},
+				{
+					"url": "https://github.com/moderntribe/products-engineering",
+					"name": "Engineering Docs"
+				},
+				{
+					"url": "https://github.com/moderntribe/advanced-post-manager",
+					"name": "Advanced Post Manager"
+				},
+				{
+					"url": "https://github.com/moderntribe/TribalScents",
+					"name": "CodeSniffer: Tribal Scents"
+				},
+				{
+					"url": "https://github.com/moderntribe/tr1b0t",
+					"name": "Hubot: tr1b0t"
+				},
+				{
+					"url": "https://github.com/moderntribe/tribe-jenkins-scripts",
+					"name": "Jenkins Scripts"
+				},
+				{
+					"url": "https://github.com/moderntribe/product-taskmaster",
+					"name": "Product Taskmaster"
+				},
+				{
+					"url": "https://github.com/moderntribe/tribe-product-utils",
+					"name": "Product Utils"
+				},
+				{
+					"url": "https://github.com/borkweb/bitbar-scripts",
+					"name": "Scripts: BitBar"
+				},
+				{
+					"url": "https://github.com/borkweb/tampermonkey-scripts",
+					"name": "Scripts: Tampermonkey"
+				}
+			]
 		}
 	]
 }
