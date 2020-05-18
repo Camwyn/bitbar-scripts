@@ -1,7 +1,5 @@
 {
 	"repos"       : "sections-sample/repos.json",
-	"scrums"      : "sections-sample/scrums.json",
-	"code-reviews": "sections-sample/code-reviews.json",
 	"queries"     : "sections-sample/queries.json",
 	"extras"      : "sections-sample/extras.json"
 }

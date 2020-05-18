@@ -1,0 +1,10 @@
+{
+	"name": "Queries",
+	"nested": false,
+	"items": [
+		{
+			"url": "https://moderntribe.atlassian.net/jira/your-work",
+			"name": "My Work"
+		}
+	]
+}

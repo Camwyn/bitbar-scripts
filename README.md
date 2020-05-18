@@ -8,8 +8,8 @@
 
 ## Scripts
 
-### tribe-central.js
+### tribe-bitbar.js
 
-This is a BitBar script that adds links to various Modern Tribe repos/resources. Customizing is fairly easy and instructions can be found in `tribe-central/README.md`.
+This is a BitBar script that adds links to various Modern Tribe repos/resources. Customizing is fairly easy and instructions can be found in `tribe-bitbar/README.md`.
 
-![tribe-central](https://github.com/Camwyn/bitbar-scripts/raw/master/tribe-central/screenshot.png)
+![tribe-bitbar](https://github.com/Camwyn/bitbar-scripts/raw/master/tribe-bitbar/screenshot.png)

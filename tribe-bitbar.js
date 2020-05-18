@@ -1,12 +1,12 @@
-#!/usr/bin/env /Users/camwyn/.nvm/versions/node/v9.11.2/bin/node
+#! /usr/local/bin/node
 /* jshint esversion: 6, loopfunc: true */
 
 /*
-<bitbar.title>Tribe Central</bitbar.title>
-<bitbar.version>v1.0.0</bitbar.version>
-<bitbar.author>Matthew Batchelder</bitbar.author>
-<bitbar.author.github>borkweb</bitbar.author.github>
-<bitbar.desc>Based on the Tribe Central script built by Gustavo Bordoni (bordoni)</bitbar.desc>
+<bitbar.title>Tribe BitBar</bitbar.title>
+<bitbar.version>v1.0.1</bitbar.version>
+<bitbar.author>Stephen Page</bitbar.author>
+<bitbar.author.github>camwyn</bitbar.author.github>
+<bitbar.desc>Based on the Tribe BitBar script built by Gustavo Bordoni (bordoni) and modified by Matthew Batchelder (borkweb)</bitbar.desc>
 <bitbar.image></bitbar.image>
 <bitbar.dependencies>node, npm, npm/fs, npm/home-config, npm/googleapis, npm/google-auth-library, npm/http, npm/moment, npm/open</bitbar.dependencies>
 <bitbar.abouturl></bitbar.abouturl>
@@ -26,9 +26,9 @@ var stat;
 var sections = {};
 
 try {
-	sections = require( './tribe-central/sections.json' );
+	sections = require( './tribe-bitbar/sections.json' );
 } catch( err ) {
-	sections = require( './tribe-central/sections.sample.json' );
+	sections = require( './tribe-bitbar/sections.sample.json' );
 }
 
 if ( ! process.env.BitBar ) {
@@ -51,7 +51,7 @@ for ( var key in sections ) {
 		&& 'object' !== typeof section
 	) {
 		try {
-			section = require( './tribe-central/' + section );
+			section = require( './tribe-bitbar/' + section );
 		} catch( err ) {
 			section = {};
 		}
@@ -80,9 +80,6 @@ for ( var key in sections ) {
 		} else {
 			if ( 'undefined' !== typeof child.url ) {
 				console.log( sep + child.name + ' | href=' + child.url );
-			} else if ( 'undefined' !== typeof child.id ) {
-				console.log( sep + child.name + ' | href=https://central.tri.be/issues/' + child.id );
-				console.log( sep + child.name + ' ⬅ | alternate=true href=https://central.tri.be/issues/' + child.id + '/time_entries/new' );
 			} else {
 				console.log( sep + child.name );
 			}
