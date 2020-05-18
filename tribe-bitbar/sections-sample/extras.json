@@ -3,8 +3,8 @@
 	"nested": false,
 	"items": [
 		{
-			"url": "http://bit.ly/2rmYRpk",
-			"name": "Pull Requests"
+			"url": "https://github.com/pulls",
+			"name": "My Pull Requests"
 		}
 	]
 }
